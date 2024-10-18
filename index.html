@@ -3,132 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Using Lora and Roboto Condensed Fonts</title>
-    <!-- Link to Google Fonts for Lora and Roboto Condensed -->
+    <title>Soon.</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             height: 100vh;
             background: 
-                url('https://th.bing.com/th/id/R.75ed0a688190462bdab575cf02057f0e?rik=%2fwdXOwCp0m0uyQ&riu=http%3a%2f%2fwww.crwflags.com%2ffotw%2fimages%2ff%2ffr%7dgud.gif&ehk=05MLMuZ2kpXoaNm1Wz0v22TJy3%2bguMH%2f9dUeKdWMbDc%3d&risl=&pid=ImgRaw&r=0') no-repeat center; /* Background image */
-            background-size: 30%; /* Set the size of the background image to 30% */
-            background-color: black; /* Set background color to black */
-            position: relative; /* Positioning context for absolute elements */
+                url('https://th.bing.com/th/id/R.75ed0a688190462bdab575cf02057f0e?rik=%2fwdXOwCp0m0uyQ&riu=http%3a%2f%2fwww.crwflags.com%2ffotw%2fimages%2ff%2ffr%7dgud.gif&ehk=05MLMuZ2kpXoaNm1Wz0v22TJy3%2bguMH%2f9dUeKdWMbDc%3d&risl=&pid=ImgRaw&r=0') no-repeat center; 
+            background-size: 30%; 
+            background-color: black; 
+            position: relative; 
             display: flex;
-            flex-direction: column; /* Stack elements vertically */
-            align-items: center; /* Center elements horizontally */
+            flex-direction: column; 
+            align-items: center; 
             overflow: hidden;
-            font-family: 'Lora', serif; /* Apply Lora font for title */
+            font-family: 'Lora', serif; 
         }
 
         .title {
             color: white;
-            font-size: 48px; /* Title font size */
-            opacity: 0; /* Start with fully transparent */
-            animation: moveUp 1.3s ease-in-out forwards, fadeIn 1.3s ease-in-out forwards; /* Both animations run together */
-            margin-top: 0; /* No margin at the top */
-            position: absolute; /* Position title at the top */
-            top: 20px; /* Position 20px from the top */
+            font-size: 48px; 
+            opacity: 0; 
+            animation: moveUp 1.3s ease-in-out forwards, fadeIn 1.3s ease-in-out forwards; 
+            margin-top: 0; 
+            position: absolute; 
+            top: 20px; 
         }
 
         .subtitle {
-            font-family: 'Roboto Condensed', sans-serif; /* Apply Roboto Condensed font */
+            font-family: 'Roboto Condensed', sans-serif; 
             color: white;
-            font-size: 24px; /* Subtitle font size */
-            margin-top: 100px; /* Increased space between title and subtitle */
-            opacity: 0; /* Start with fully transparent */
-            animation: moveUp 1.3s ease-in-out forwards, fadeIn 1.3s ease-in-out forwards; /* Both animations run together */
-            animation-delay: 0.5s; /* Delay for subtitle animation */
+            font-size: 24px; 
+            margin-top: 100px; 
+            opacity: 0; 
+            animation: moveUp 1.3s ease-in-out forwards, fadeIn 1.3s ease-in-out forwards; 
         }
 
         .info {
-            font-family: 'Roboto Condensed', sans-serif; /* Apply Roboto Condensed font */
             color: white;
-            font-size: 20px; /* Info text font size */
-            margin-top: 50px; /* Space below the subtitle */
-            opacity: 0; /* Start with fully transparent */
-            animation: moveUp 1.3s ease-in-out forwards, fadeIn 1.3s ease-in-out forwards; /* Both animations run together */
-            animation-delay: 1s; /* Delay for info text animation */
-        }
-
-        .source {
-            font-family: 'Roboto Condensed', sans-serif; /* Apply Roboto Condensed font */
-            color: white;
-            font-size: 16px; /* Source text font size */
-            margin-top: 20px; /* Space below the info text */
-            opacity: 0; /* Start with fully transparent */
-            animation: moveUp 1.3s ease-in-out forwards, fadeIn 1.3s ease-in-out forwards; /* Both animations run together */
-            animation-delay: 1.5s; /* Delay for source text animation */
+            font-size: 18px; 
+            opacity: 0; 
+            animation: fadeIn 2.8s ease-in forwards;
+            margin-top: 40px; 
         }
 
         .links {
-            display: flex; /* Use flexbox for columns */
-            justify-content: space-around; /* Space out the columns */
-            width: 100%; /* Full width */
-            margin-top: 30px; /* Space above the links section */
-            padding: 20px 0; /* Padding for top and bottom */
-            background-color: #8B0000; /* Dark red background for the links section (Blood red) */
-            opacity: 0; /* Start with fully transparent */
-            animation: fadeIn 1s ease-in-out forwards; /* Fade in effect */
-            animation-delay: 4s; /* Delay to fade in after 4 seconds */
+            display: flex; 
+            justify-content: space-around; 
+            margin-top: 20px; 
+            opacity: 0; 
+            animation: fadeIn 2.8s ease-in forwards;
+            color: darkred; 
+            font-size: 16px; 
         }
 
-        .link {
-            color: white; /* White text color */
-            text-decoration: none; /* Remove underline from links */
-            font-family: 'Roboto Condensed', sans-serif; /* Apply Roboto Condensed font */
-            font-size: 16px; /* Font size for links */
-            text-align: center; /* Center text */
-            opacity: 0; /* Start with fully transparent */
-            animation: fadeIn 1s ease-in-out forwards; /* Fade in effect */
+        .links a {
+            color: darkred; 
+            text-decoration: none; 
+            transition: color 0.3s; 
         }
 
-        .link:nth-child(1) {
-            animation-delay: 4.5s; /* Delay for first link */
-        }
-        .link:nth-child(2) {
-            animation-delay: 4.7s; /* Delay for second link */
-        }
-        .link:nth-child(3) {
-            animation-delay: 4.9s; /* Delay for third link */
-        }
-        .link:nth-child(4) {
-            animation-delay: 5.1s; /* Delay for fourth link */
+        .links a:hover {
+            color: red; 
         }
 
         @keyframes moveUp {
-            from {
-                transform: translateY(50px); /* Move up effect */
-            }
-            to {
-                transform: translateY(0); /* End at original position */
-            }
+            0% { transform: translateY(20px); }
+            100% { transform: translateY(0); }
         }
 
         @keyframes fadeIn {
-            from {
-                opacity: 0; /* Start fully transparent */
-            }
-            to {
-                opacity: 1; /* End fully visible */
-            }
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
     </style>
 </head>
 <body>
-
     <div class="title">Ser luchador es vivir para siempre.</div>
     <div class="subtitle">Hola señor/señorita, compañero o compañera, soy una persona anónima que quiere DIVERTIRSE un poco.</div>
     <div class="info">¡ESPAÑA ES EL QUINTO PAÍS CON MÁS INMIGRANTES EN LOS ÚLTIMOS 5 AÑOS!</div>
-    <div class="source">Tomado de fuentes como...</div>
-
+    <div class="info">Tomado de fuentes como...</div>
     <div class="links">
-        <a class="link" href="https://www.oecd.org/" target="_blank">OCDE (Organización para la Cooperación y el Desarrollo Económicos)</a>
-        <a class="link" href="https://www.ine.es/" target="_blank">Instituto Nacional de Estadística (INE)</a>
-        <a class="link" href="https://ec.europa.eu/eurostat" target="_blank">Eurostat</a>
-        <a class="link" href="https://www.pewresearch.org/" target="_blank">Centro de Investigación Pew</a>
+        <a href="https://www.oecd.org/" target="_blank">OCDE (Organización para la Cooperación y el Desarrollo Económicos)</a>
+        <a href="https://www.ine.es/" target="_blank">Instituto Nacional de Estadística (INE)</a>
+        <a href="https://ec.europa.eu/eurostat" target="_blank">Eurostat</a>
+        <a href="https://www.pewresearch.org/" target="_blank">Centro de Investigación Pew</a>
     </div>
-
 </body>
 </html>
