@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Using Lora and Roboto Condensed Fonts</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto+Condensed:wght@400&family=Afacad+Flux&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -98,21 +98,28 @@
 
         .second-title {
             color: white;
+            font-family: 'Afacad Flux', sans-serif; /* Use Afacad Flux font */
             font-size: 36px;
             margin-top: 600px; /* Increased margin to push it lower */
             opacity: 0;
             animation: fadeIn 1.3s ease-in-out forwards;
             animation-delay: 5.5s;
+            text-shadow: 0 0 5px rgba(255, 255, 0, 0.7), 0 0 10px rgba(255, 255, 0, 0.5); /* Glowing effect */
         }
 
         .column {
             color: white;
             font-size: 18px;
-            margin-top:70px;
+            margin-top: 70px;
             opacity: 0;
             animation: fadeIn 3s ease-in-out forwards;
             animation-delay: 6s;
             text-align: center;
+        }
+
+        .column:last-child {
+            color: brightred; /* Bright red color for the last column */
+            font-weight: bold; /* Make the text bold */
         }
 
         @keyframes moveUp {
@@ -141,14 +148,14 @@
         <div class="second-title">Estamos por todas partes.</div>
         <div class="column">Podríamos ser tu vecino.</div>
         <!-- Additional Columns -->
-        <div class="column">Columna 1: Podríamos ser tu amigo.</div>
-        <div class="column">Columna 2: Podríamos ser tu compañero de trabajo.</div>
-        <div class="column">Columna 3: Podríamos ser tu doctor.</div>
-        <div class="column">Columna 4: Podríamos ser el que está arreglando tu coche.</div>
-        <div class="column">Columna 5: Podríamos ser la persona de entrega que trae tu comida.</div>
-        <div class="column">Columna 6: Podríamos ser el cajero que conoce tu nombre.</div>
-        <div class="column">Columna 7: Podríamos ser el extraño que conociste en la calle.</div>
-        <div class="column">Columna 8: Podríamos ser cualquiera, en cualquier lugar y cualquer dia.</div>
+        <div class="column"> Podríamos ser tu amigo.</div>
+        <div class="column"> Podríamos ser tu compañero de trabajo.</div>
+        <div class="column"> Podríamos ser tu doctor.</div>
+        <div class="column"> Podríamos ser el que está arreglando tu coche.</div>
+        <div class="column"> Podríamos ser la persona de entrega que trae tu comida.</div>
+        <div class="column"> Podríamos ser el cajero que conoce tu nombre.</div>
+        <div class="column"> Podríamos ser el extraño que conociste en la calle.</div>
+        <div class="column"> Podríamos ser cualquiera, en cualquier lugar y cualquier día.</div>
     </div>
 </body>
 </html>
