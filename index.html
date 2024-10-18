@@ -18,6 +18,7 @@
             align-items: center; 
             font-family: 'Lora', serif; 
             overflow: auto; /* Allow scrolling */
+            position: relative; /* Ensure relative positioning for absolute elements */
         }
 
         .content {
@@ -105,21 +106,6 @@
             animation-delay: 5.5s;
             font-family: 'Afacad Flux', sans-serif; /* Ensure to have this font loaded */
             text-shadow: 0 0 10px rgba(255, 0, 0, 1), 0 0 20px rgba(255, 0, 0, 0.5); /* Glowing effect */
-            position: relative; /* Allow image placement */
-        }
-
-        /* Adding styles for the images on both sides */
-        .side-images {
-            position: absolute;
-            top: -20px;
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        .side-images img {
-            width: 100px;
-            height: auto;
         }
 
         .column {
@@ -146,6 +132,23 @@
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
+
+        /* Adding images to the sides */
+        .side-image {
+            position: absolute;
+            top: 50%; /* Vertically center */
+            width: 150px; /* Adjust width as needed */
+            height: auto;
+            transform: translateY(-50%);
+        }
+
+        .left-image {
+            left: -200px; /* Adjust position from the left */
+        }
+
+        .right-image {
+            right: -200px; /* Adjust position from the right */
+        }
     </style>
 </head>
 <body>
@@ -160,16 +163,9 @@
             <div class="link" style="animation-delay: 7.3s;"><a href="https://ec.europa.eu/eurostat" target="_blank">Eurostat</a></div>
             <div class="link" style="animation-delay: 8s;"><a href="https://www.pewresearch.org/" target="_blank">Centro de Investigación Pew</a></div>
         </div>
-        <div class="second-title">
-            Estamos por todas partes.
-            <!-- Adding images on both sides -->
-            <div class="side-images">
-                <img src="https://i.pinimg.com/originals/76/8a/d7/768ad763468a1d7dd1b487a30e66d39b.png" alt="Left Image">
-                <img src="https://i.pinimg.com/originals/76/8a/d7/768ad763468a1d7dd1b487a30e66d39b.png" alt="Right Image">
-            </div>
-        </div>
+        <div class="second-title">Estamos por todas partes.</div>
         <div class="column">Podríamos ser tu vecino.</div>
-        <div class="column bright-red">Podríamos ser tu amigo.</div> <!-- This line has been updated -->
+        <div class="column bright-red">Podríamos ser tu amigo.</div>
         <div class="column">Podríamos ser tu compañero de trabajo.</div>
         <div class="column">Podríamos ser tu doctor.</div>
         <div class="column">Podríamos ser el que está arreglando tu coche.</div>
@@ -178,5 +174,9 @@
         <div class="column">Podríamos ser el extraño que conociste en la calle.</div>
         <div class="column">Podríamos ser cualquiera, en cualquier lugar y cualquier día.</div>
     </div>
+
+    <!-- Adding the images on both sides -->
+    <img src="https://i.pinimg.com/originals/76/8a/d7/768ad763468a1d7dd1b487a30e66d39b.png" alt="Left Side Image" class="side-image left-image">
+    <img src="https://i.pinimg.com/originals/76/8a/d7/768ad763468a1d7dd1b487a30e66d39b.png" alt="Right Side Image" class="side-image right-image">
 </body>
 </html>
