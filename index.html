@@ -26,7 +26,7 @@
             font-size: 48px; 
             opacity: 0; 
             animation: moveUp 1.3s ease-in-out forwards, fadeIn 1.3s ease-in-out forwards; 
-            margin-top: 50px; /* Adjusted margin-top */
+            margin-top: 0; 
             position: absolute; 
             top: 20px; 
             animation-delay: 0.5s;
@@ -89,37 +89,33 @@
             color: red; 
         }
 
-        /* New styles for the title and subcolumns */
-        .column-title {
+        /* New styles for the new title and columns */
+        .new-title {
             color: white;
-            font-size: 32px;
-            margin-top: 80px; /* Adjust margin to push it down */
+            font-size: 36px;
+            margin-top: 100px; /* Increased margin for more space */
             opacity: 0;
-            animation: fadeIn 1s ease-in forwards;
-            animation-delay: 5s; /* Adjust delay for smooth appearance */
+            animation: fadeIn 1.3s ease-in forwards;
+            animation-delay: 5.5s; /* Delay for the new title */
         }
 
-        .subcolumns {
+        .columns {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px; /* Increased margin for more space */
             opacity: 0;
-            animation: fadeIn 1s ease-in forwards;
-            animation-delay: 5.5s; /* Slight delay after title */
+            animation: fadeIn 1.3s ease-in forwards;
+            animation-delay: 6s; /* Delay for the columns */
         }
 
-        .subcolumn {
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-radius: 5px;
+        .sub-column {
             color: white;
-            font-size: 18px;
-            padding: 10px 20px;
-            margin: 10px;
-            text-align: center;
+            font-size: 20px;
+            margin: 5px 0;
             opacity: 0;
-            animation: fadeIn 0.5s ease-in forwards;
+            animation: fadeIn 1s ease-in forwards;
+            animation-delay: calc(6.5s + var(--i) * 0.2); /* Staggered delays */
         }
 
         @keyframes moveUp {
@@ -144,17 +140,18 @@
         <div class="link" style="animation-delay: 7.3s;"><a href="https://ec.europa.eu/eurostat" target="_blank">Eurostat</a></div>
         <div class="link" style="animation-delay: 8s;"><a href="https://www.pewresearch.org/" target="_blank">Centro de Investigación Pew</a></div>
     </div>
-
-    <div class="column-title">Otra Título</div>
-    <div class="subcolumns">
-        <div class="subcolumn" style="animation-delay: 9s;">Subcolumn 1</div>
-        <div class="subcolumn" style="animation-delay: 9.5s;">Subcolumn 2</div>
-        <div class="subcolumn" style="animation-delay: 10s;">Subcolumn 3</div>
-        <div class="subcolumn" style="animation-delay: 10.5s;">Subcolumn 4</div>
-        <div class="subcolumn" style="animation-delay: 11s;">Subcolumn 5</div>
-        <div class="subcolumn" style="animation-delay: 11.5s;">Subcolumn 6</div>
-        <div class="subcolumn" style="animation-delay: 12s;">Subcolumn 7</div>
-        <div class="subcolumn" style="animation-delay: 12.5s;">Subcolumn 8</div>
+    
+    <!-- New Section -->
+    <div class="new-title">Datos Importantes</div>
+    <div class="columns">
+        <div class="sub-column" style="--i:0;">Sub-columna 1</div>
+        <div class="sub-column" style="--i:1;">Sub-columna 2</div>
+        <div class="sub-column" style="--i:2;">Sub-columna 3</div>
+        <div class="sub-column" style="--i:3;">Sub-columna 4</div>
+        <div class="sub-column" style="--i:4;">Sub-columna 5</div>
+        <div class="sub-column" style="--i:5;">Sub-columna 6</div>
+        <div class="sub-column" style="--i:6;">Sub-columna 7</div>
+        <div class="sub-column" style="--i:7;">Sub-columna 8</div>
     </div>
 </body>
 </html>
