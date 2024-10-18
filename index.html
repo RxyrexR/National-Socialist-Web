@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soon.</title>
+    <title>Using Lora and Roboto Condensed Fonts</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
     <style>
         body {
@@ -50,21 +50,31 @@
 
         .links {
             display: flex; 
-            justify-content: space-around; 
-            margin-top: 20px; 
-            opacity: 0; 
-            animation: fadeIn 2.8s ease-in forwards;
-            color: darkred; 
-            font-size: 16px; 
+            flex-direction: column; 
+            align-items: center; 
+            margin-top: 40px; 
         }
 
-        .links a {
+        .link {
+            opacity: 0; 
+            color: darkred; 
+            font-size: 16px; 
+            margin: 10px 0; /* Increased spacing between links */
+            animation: fadeIn 2.8s ease-in forwards; 
+        }
+
+        .link:nth-child(1) { animation-delay: 2s; }
+        .link:nth-child(2) { animation-delay: 2.4s; }
+        .link:nth-child(3) { animation-delay: 2.8s; }
+        .link:nth-child(4) { animation-delay: 3.2s; }
+
+        .link a {
             color: darkred; 
             text-decoration: none; 
             transition: color 0.3s; 
         }
 
-        .links a:hover {
+        .link a:hover {
             color: red; 
         }
 
@@ -85,10 +95,10 @@
     <div class="info">¡ESPAÑA ES EL QUINTO PAÍS CON MÁS INMIGRANTES EN LOS ÚLTIMOS 5 AÑOS!</div>
     <div class="info">Tomado de fuentes como...</div>
     <div class="links">
-        <a href="https://www.oecd.org/" target="_blank">OCDE (Organización para la Cooperación y el Desarrollo Económicos)</a>
-        <a href="https://www.ine.es/" target="_blank">Instituto Nacional de Estadística (INE)</a>
-        <a href="https://ec.europa.eu/eurostat" target="_blank">Eurostat</a>
-        <a href="https://www.pewresearch.org/" target="_blank">Centro de Investigación Pew</a>
+        <div class="link"><a href="https://www.oecd.org/" target="_blank">OCDE (Organización para la Cooperación y el Desarrollo Económicos)</a></div>
+        <div class="link"><a href="https://www.ine.es/" target="_blank">Instituto Nacional de Estadística (INE)</a></div>
+        <div class="link"><a href="https://ec.europa.eu/eurostat" target="_blank">Eurostat</a></div>
+        <div class="link"><a href="https://www.pewresearch.org/" target="_blank">Centro de Investigación Pew</a></div>
     </div>
 </body>
 </html>
