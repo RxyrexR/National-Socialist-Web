@@ -68,7 +68,10 @@
             width: 100%; /* Full width */
             margin-top: 30px; /* Space above the links section */
             padding: 20px 0; /* Padding for top and bottom */
-            background-color: darkred; /* Dark red background for the links section */
+            background-color: #8B0000; /* Dark red background for the links section (Blood red) */
+            opacity: 0; /* Start with fully transparent */
+            animation: fadeIn 1s ease-in-out forwards; /* Fade in effect */
+            animation-delay: 4s; /* Delay to fade in after 4 seconds */
         }
 
         .link {
@@ -82,16 +85,16 @@
         }
 
         .link:nth-child(1) {
-            animation-delay: 2s; /* Delay for first link */
+            animation-delay: 4.5s; /* Delay for first link */
         }
         .link:nth-child(2) {
-            animation-delay: 2.2s; /* Delay for second link */
+            animation-delay: 4.7s; /* Delay for second link */
         }
         .link:nth-child(3) {
-            animation-delay: 2.4s; /* Delay for third link */
+            animation-delay: 4.9s; /* Delay for third link */
         }
         .link:nth-child(4) {
-            animation-delay: 2.6s; /* Delay for fourth link */
+            animation-delay: 5.1s; /* Delay for fourth link */
         }
 
         @keyframes moveUp {
