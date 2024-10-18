@@ -8,17 +8,23 @@
     <style>
         body {
             margin: 0;
-            height: 100vh;
             background: 
                 url('https://th.bing.com/th/id/R.75ed0a688190462bdab575cf02057f0e?rik=%2fwdXOwCp0m0uyQ&riu=http%3a%2f%2fwww.crwflags.com%2ffotw%2fimages%2ff%2ffr%7dgud.gif&ehk=05MLMuZ2kpXoaNm1Wz0v22TJy3%2bguMH%2f9dUeKdWMbDc%3d&risl=&pid=ImgRaw&r=0') no-repeat center; 
             background-size: 30%; 
             background-color: black; 
-            position: relative; 
             display: flex;
             flex-direction: column; 
             align-items: center; 
-            overflow: hidden;
             font-family: 'Lora', serif; 
+            overflow: auto; /* Allow scrolling */
+            height: 100vh; /* Set height to viewport height */
+        }
+
+        .content {
+            flex-grow: 1; /* Allow content to grow */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .title {
@@ -89,33 +95,14 @@
             color: red; 
         }
 
-        /* New styles for the new title and columns */
-        .new-title {
+        .bottom-title {
             color: white;
             font-size: 36px;
-            margin-top: 100px; /* Increased margin for more space */
             opacity: 0;
-            animation: fadeIn 1.3s ease-in forwards;
-            animation-delay: 5.5s; /* Delay for the new title */
-        }
-
-        .columns {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 40px; /* Increased margin for more space */
-            opacity: 0;
-            animation: fadeIn 1.3s ease-in forwards;
-            animation-delay: 6s; /* Delay for the columns */
-        }
-
-        .sub-column {
-            color: white;
-            font-size: 20px;
-            margin: 5px 0;
-            opacity: 0;
-            animation: fadeIn 1s ease-in forwards;
-            animation-delay: calc(6.5s + var(--i) * 0.2); /* Staggered delays */
+            animation: fadeIn 1s ease-in forwards; /* Fade-in effect */
+            margin-bottom: 20px; /* Space from the bottom */
+            position: relative; /* To adjust positioning */
+            animation-delay: 5s; /* Delay for the bottom title */
         }
 
         @keyframes moveUp {
@@ -130,28 +117,18 @@
     </style>
 </head>
 <body>
-    <div class="title">Ser luchador es vivir para siempre.</div>
-    <div class="subtitle">Hola señor/señorita, compañero o compañera, soy una persona anónima que quiere DIVERTIRSE un poco.</div>
-    <div class="info">¡ESPAÑA ES EL QUINTO PAÍS CON MÁS INMIGRANTES EN LOS ÚLTIMOS 5 AÑOS!</div>
-    <div class="sources">Tomado de fuentes como...</div>
-    <div class="links">
-        <div class="link" style="animation-delay: 6s;"><a href="https://www.oecd.org/" target="_blank">OCDE (Organización para la Cooperación y el Desarrollo Económicos)</a></div>
-        <div class="link" style="animation-delay: 6.7s;"><a href="https://www.ine.es/" target="_blank">Instituto Nacional de Estadística (INE)</a></div>
-        <div class="link" style="animation-delay: 7.3s;"><a href="https://ec.europa.eu/eurostat" target="_blank">Eurostat</a></div>
-        <div class="link" style="animation-delay: 8s;"><a href="https://www.pewresearch.org/" target="_blank">Centro de Investigación Pew</a></div>
+    <div class="content">
+        <div class="title">Ser luchador es vivir para siempre.</div>
+        <div class="subtitle">Hola señor/señorita, compañero o compañera, soy una persona anónima que quiere DIVERTIRSE un poco.</div>
+        <div class="info">¡ESPAÑA ES EL QUINTO PAÍS CON MÁS INMIGRANTES EN LOS ÚLTIMOS 5 AÑOS!</div>
+        <div class="sources">Tomado de fuentes como...</div>
+        <div class="links">
+            <div class="link" style="animation-delay: 6s;"><a href="https://www.oecd.org/" target="_blank">OCDE (Organización para la Cooperación y el Desarrollo Económicos)</a></div>
+            <div class="link" style="animation-delay: 6.7s;"><a href="https://www.ine.es/" target="_blank">Instituto Nacional de Estadística (INE)</a></div>
+            <div class="link" style="animation-delay: 7.3s;"><a href="https://ec.europa.eu/eurostat" target="_blank">Eurostat</a></div>
+            <div class="link" style="animation-delay: 8s;"><a href="https://www.pewresearch.org/" target="_blank">Centro de Investigación Pew</a></div>
+        </div>
     </div>
-    
-    <!-- New Section -->
-    <div class="new-title">Datos Importantes</div>
-    <div class="columns">
-        <div class="sub-column" style="--i:0;">Sub-columna 1</div>
-        <div class="sub-column" style="--i:1;">Sub-columna 2</div>
-        <div class="sub-column" style="--i:2;">Sub-columna 3</div>
-        <div class="sub-column" style="--i:3;">Sub-columna 4</div>
-        <div class="sub-column" style="--i:4;">Sub-columna 5</div>
-        <div class="sub-column" style="--i:5;">Sub-columna 6</div>
-        <div class="sub-column" style="--i:6;">Sub-columna 7</div>
-        <div class="sub-column" style="--i:7;">Sub-columna 8</div>
-    </div>
+    <div class="bottom-title">Estamos por todas partes.</div> <!-- Second title at the bottom -->
 </body>
 </html>
