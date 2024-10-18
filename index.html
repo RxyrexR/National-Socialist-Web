@@ -13,8 +13,7 @@
             background: linear-gradient(to bottom, #1c1c1c, #000000); /* Dark gray to black gradient */
             display: flex;
             flex-direction: column; /* Stack elements vertically */
-            justify-content: center;
-            align-items: center;
+            align-items: center; /* Center elements horizontally */
             overflow: hidden;
             font-family: 'Lora', serif; /* Apply Lora font for title */
         }
@@ -23,16 +22,19 @@
             color: white;
             font-size: 48px; /* Title font size */
             opacity: 0; /* Start with fully transparent */
-            animation: moveUp 2s ease-in-out forwards, fadeIn 2s ease-in-out forwards; /* Both animations run together */
+            animation: moveUp 1.3s ease-in-out forwards, fadeIn 1.3s ease-in-out forwards; /* Both animations run together */
+            margin-top: 0; /* No margin at the top */
+            position: absolute; /* Position title at the top */
+            top: 20px; /* Position 20px from the top */
         }
 
         .subtitle {
             font-family: 'Roboto Condensed', sans-serif; /* Apply Roboto Condensed font */
             color: white;
             font-size: 24px; /* Subtitle font size */
-            margin-top: 10px; /* Space between title and subtitle */
+            margin-top: 60px; /* Space between title and subtitle */
             opacity: 0; /* Start with fully transparent */
-            animation: moveUp 2s ease-in-out forwards, fadeIn 2s ease-in-out forwards; /* Both animations run together */
+            animation: moveUp 1.3s ease-in-out forwards, fadeIn 1.3s ease-in-out forwards; /* Both animations run together */
             animation-delay: 0.5s; /* Delay for subtitle animation */
         }
 
