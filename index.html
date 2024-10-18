@@ -3,35 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Using Lora Font</title>
-    <!-- Link to Google Fonts for Lora -->
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <title>Using Lora and Roboto Condensed Fonts</title>
+    <!-- Link to Google Fonts for Lora and Roboto Condensed -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             height: 100vh;
             background: linear-gradient(to bottom, #1c1c1c, #000000); /* Dark gray to black gradient */
             display: flex;
+            flex-direction: column; /* Stack elements vertically */
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             overflow: hidden;
-            font-family: 'Lora', serif; /* Apply Lora font */
+            font-family: 'Lora', serif; /* Apply Lora font for title */
         }
 
-        .text {
-            position: relative;
+        .title {
             color: white;
-            font-size: 48px; /* Increase font size */
+            font-size: 48px; /* Title font size */
             opacity: 0; /* Start with fully transparent */
-            animation: moveUp 1.3s ease-in-out forwards, fadeIn 1.3s ease-in-out forwards; /* Both animations run together */
+            animation: moveUp 2s ease-in-out forwards, fadeIn 2s ease-in-out forwards; /* Both animations run together */
+        }
+
+        .subtitle {
+            font-family: 'Roboto Condensed', sans-serif; /* Apply Roboto Condensed font */
+            color: white;
+            font-size: 24px; /* Subtitle font size */
+            margin-top: 10px; /* Space between title and subtitle */
+            opacity: 0; /* Start with fully transparent */
+            animation: moveUp 2s ease-in-out forwards, fadeIn 2s ease-in-out forwards; /* Both animations run together */
+            animation-delay: 0.5s; /* Delay for subtitle animation */
         }
 
         @keyframes moveUp {
             from {
-                top: 100vh; /* Start from the bottom */
+                transform: translateY(50px); /* Move up effect */
             }
             to {
-                top: 20px; /* End near the top */
+                transform: translateY(0); /* End at original position */
             }
         }
 
@@ -47,7 +57,8 @@
 </head>
 <body>
 
-    <div class="text">Ser luchador es vivir para siempre.</div>
+    <div class="title">Ser luchador es vivir para siempre.</div>
+    <div class="subtitle">Hola señor/señorita, compañero o compañera, soy una persona anónima que quiere DIVERTIRSE un poco.</div>
 
 </body>
 </html>
