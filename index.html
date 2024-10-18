@@ -29,7 +29,7 @@
             margin-top: 0; 
             position: absolute; 
             top: 20px; 
-            animation-delay: 1s;
+            animation-delay: 0.5s;
         }
 
         .subtitle {
@@ -39,7 +39,7 @@
             margin-top: 100px; 
             opacity: 0; 
             animation: moveUp 1.3s ease-in-out forwards, fadeIn 1.3s ease-in-out forwards; 
-            animation-delay: 2.4s;
+            animation-delay: 1.9s;
         }
 
         .info {
@@ -48,7 +48,7 @@
             opacity: 0; 
             animation: fadeIn 2.8s ease-in forwards;
             margin-top: 40px; 
-            animation-delay: 3.4s;
+            animation-delay: 2.9s;
         }
 
         .sources {
@@ -57,7 +57,7 @@
             opacity: 0; 
             animation: fadeIn 2.8s ease-in forwards;
             margin-top: 20px; 
-            animation-delay: 4.4s;
+            animation-delay: 3.9s;
         }
 
         .links {
@@ -66,7 +66,7 @@
             margin-top: 40px; 
             opacity: 0; 
             animation: fadeIn 2.8s ease-in forwards; 
-            animation-delay: 5.4s; 
+            animation-delay: 4.9s; 
         }
 
         .link {
@@ -74,6 +74,8 @@
             font-size: 16px; 
             margin: 0 20px; /* Increased spacing between links */
             transition: color 0.3s; 
+            opacity: 0; /* Initially hidden */
+            animation: fadeIn 0.5s ease-in forwards; /* Fade-in effect for each link */
         }
 
         .link a {
@@ -103,10 +105,10 @@
     <div class="info">¡ESPAÑA ES EL QUINTO PAÍS CON MÁS INMIGRANTES EN LOS ÚLTIMOS 5 AÑOS!</div>
     <div class="sources">Tomado de fuentes como...</div>
     <div class="links">
-        <div class="link"><a href="https://www.oecd.org/" target="_blank">OCDE (Organización para la Cooperación y el Desarrollo Económicos)</a></div>
-        <div class="link"><a href="https://www.ine.es/" target="_blank">Instituto Nacional de Estadística (INE)</a></div>
-        <div class="link"><a href="https://ec.europa.eu/eurostat" target="_blank">Eurostat</a></div>
-        <div class="link"><a href="https://www.pewresearch.org/" target="_blank">Centro de Investigación Pew</a></div>
+        <div class="link" style="animation-delay: 5.4s;"><a href="https://www.oecd.org/" target="_blank">OCDE (Organización para la Cooperación y el Desarrollo Económicos)</a></div>
+        <div class="link" style="animation-delay: 6.1s;"><a href="https://www.ine.es/" target="_blank">Instituto Nacional de Estadística (INE)</a></div>
+        <div class="link" style="animation-delay: 6.7s;"><a href="https://ec.europa.eu/eurostat" target="_blank">Eurostat</a></div>
+        <div class="link" style="animation-delay: 7.4s;"><a href="https://www.pewresearch.org/" target="_blank">Centro de Investigación Pew</a></div>
     </div>
 </body>
 </html>
