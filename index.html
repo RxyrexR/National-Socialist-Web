@@ -29,6 +29,7 @@
             margin-top: 0; 
             position: absolute; 
             top: 20px; 
+            animation-delay: 1s;
         }
 
         .subtitle {
@@ -37,7 +38,8 @@
             font-size: 24px; 
             margin-top: 100px; 
             opacity: 0; 
-            animation: moveUp 2s ease-in-out forwards, fadeIn 2s ease-in-out forwards; 
+            animation: moveUp 1.3s ease-in-out forwards, fadeIn 1.3s ease-in-out forwards; 
+            animation-delay: 2.4s;
         }
 
         .info {
@@ -46,27 +48,33 @@
             opacity: 0; 
             animation: fadeIn 2.8s ease-in forwards;
             margin-top: 40px; 
+            animation-delay: 3.4s;
+        }
+
+        .sources {
+            color: white;
+            font-size: 18px; 
+            opacity: 0; 
+            animation: fadeIn 2.8s ease-in forwards;
+            margin-top: 20px; 
+            animation-delay: 4.4s;
         }
 
         .links {
             display: flex; 
-            flex-direction: column; 
-            align-items: center; 
+            justify-content: center; 
             margin-top: 40px; 
+            opacity: 0; 
+            animation: fadeIn 2.8s ease-in forwards; 
+            animation-delay: 5.4s; 
         }
 
         .link {
-            opacity: 0; 
             color: darkred; 
             font-size: 16px; 
-            margin: 10px 0; /* Increased spacing between links */
-            animation: fadeIn 2.8s ease-in forwards; 
+            margin: 0 20px; /* Increased spacing between links */
+            transition: color 0.3s; 
         }
-
-        .link:nth-child(1) { animation-delay: 2s; }
-        .link:nth-child(2) { animation-delay: 2.9s; }
-        .link:nth-child(3) { animation-delay: 3.5s; }
-        .link:nth-child(4) { animation-delay: 4.2s; }
 
         .link a {
             color: darkred; 
@@ -93,7 +101,7 @@
     <div class="title">Ser luchador es vivir para siempre.</div>
     <div class="subtitle">Hola señor/señorita, compañero o compañera, soy una persona anónima que quiere DIVERTIRSE un poco.</div>
     <div class="info">¡ESPAÑA ES EL QUINTO PAÍS CON MÁS INMIGRANTES EN LOS ÚLTIMOS 5 AÑOS!</div>
-    <div class="info">Tomado de fuentes como...</div>
+    <div class="sources">Tomado de fuentes como...</div>
     <div class="links">
         <div class="link"><a href="https://www.oecd.org/" target="_blank">OCDE (Organización para la Cooperación y el Desarrollo Económicos)</a></div>
         <div class="link"><a href="https://www.ine.es/" target="_blank">Instituto Nacional de Estadística (INE)</a></div>
